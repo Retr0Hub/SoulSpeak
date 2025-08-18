@@ -19,8 +19,19 @@ export async function setupDatabase() {
         table.string('email').unique().notNullable();
         table.string('password').notNullable();
         table.string('mobileNumber').notNullable();
+        table.string('name');
       });
       console.log("Created 'caretakers' table.");
+    }
+    // Ensure optional columns exist
+    else {
+      const hasName = await db.schema.hasColumn('caretakers', 'name');
+      if (!hasName) {
+        await db.schema.alterTable('caretakers', (table) => {
+          table.string('name');
+        });
+        console.log("Added 'name' column to 'caretakers' table.");
+      }
     }
 
     if (!(await db.schema.hasTable('patients'))) {
@@ -31,6 +42,18 @@ export async function setupDatabase() {
         table.integer('caretakerId').unsigned().references('id').inTable('caretakers');
       });
       console.log("Created 'patients' table.");
+    }
+
+    // Session tokens for opaque, random-hash authentication
+    if (!(await db.schema.hasTable('sessions'))) {
+      await db.schema.createTable('sessions', (table) => {
+        table.increments('id').primary();
+        table.string('token').unique().notNullable();
+        table.integer('caretakerId').unsigned().references('id').inTable('caretakers').onDelete('CASCADE');
+        table.datetime('expiresAt').notNullable();
+        table.timestamps(true, true);
+      });
+      console.log("Created 'sessions' table.");
     }
   } catch (error) {
     console.error('Error setting up database:', error);

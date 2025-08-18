@@ -1,20 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+SoulSpeak: Caretaker/Patient yes/no communication with gesture input. Next.js frontend, Express + SQLite backend.
 
 ## Getting Started
 
-First, run the development server:
+Run the development servers:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) for the app. Backend runs on http://localhost:4000.
+
+Key flows:
+- Patient: Open Patient View. A 6-digit PIN is auto-generated and displayed. Share it with caretaker; when they connect, you are forwarded to the question screen.
+- Caretaker: Sign up or login. In Add Patient, enter patient name and the patient's PIN to connect.
+
+Auth:
+- Uses opaque random session tokens. Endpoints available at `/signup` and `/login` (aliases of `/api/register` and `/api/login`).
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
