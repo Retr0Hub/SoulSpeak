@@ -154,29 +154,48 @@ export default function AssistantCaretakerApp() {
 	);
 }
 
-// --- SCREENS ---
-
 const LandingScreen = ({ onGoSignin, onGoSignup, onGoPatient }) => (
-	<div className="relative flex flex-col items-center justify-center min-h-[90vh] text-center px-4 overflow-hidden">
-		<div className="absolute inset-0 bg-grid-slate-200/[0.05] dark:bg-grid-slate-700/[0.1] [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
-		<div className="relative z-10">
-			<div className="relative">
-				<div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-600 rounded-full blur-3xl opacity-20 dark:opacity-30"></div>
-				<h1 className="relative text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600">SoulSpeak</h1>
-			</div>
-			<p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Bridging communication gaps with a simple gesture. Empowering patients, assisting caretakers.</p>
-			<div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-				<button onClick={onGoSignin} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 text-lg font-semibold text-white bg-slate-800 dark:bg-slate-700 rounded-xl shadow-lg hover:bg-slate-700 dark:hover:bg-slate-600 transform hover:-translate-y-1 transition-all duration-300">
-					Caretaker Sign In <LogIn className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-				</button>
-				<button onClick={onGoPatient} className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 text-lg font-semibold text-teal-600 dark:text-teal-400 bg-white dark:bg-slate-800/50 border-2 border-teal-500/50 dark:border-teal-400/50 rounded-xl shadow-lg hover:border-teal-500 dark:hover:border-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transform hover:-translate-y-1 transition-all duration-300">
-					Patient View <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-				</button>
-			</div>
-			<div className="mt-6 text-xs text-slate-500 dark:text-slate-400">©SoulSpeak 2025</div>
-		</div>
-	</div>
+  <div className="relative flex flex-col h-screen overflow-hidden text-center px-4">
+    {/* Background Grid */}
+    <div className="absolute inset-0 bg-grid-slate-200/[0.05] dark:bg-grid-slate-700/[0.1] [mask-image:linear-gradient(to_bottom,white_5%,transparent_50%)]"></div>
+
+    {/* Main Content (centered) */}
+    <div className="relative z-10 flex flex-col items-center justify-center flex-1">
+      <div className="relative">
+        <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-600 rounded-full blur-3xl opacity-20 dark:opacity-30"></div>
+        <h1 className="relative text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600">
+          SoulSpeak
+        </h1>
+      </div>
+      <p className="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+        Bridging communication gaps with a simple gesture. Empowering patients, assisting caretakers.
+      </p>
+
+      <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <button
+          onClick={onGoSignin}
+          className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 text-lg font-semibold text-white bg-slate-800 dark:bg-slate-700 rounded-xl shadow-lg hover:bg-slate-700 dark:hover:bg-slate-600 transform hover:-translate-y-1 transition-all duration-300"
+        >
+          Caretaker Sign In{" "}
+          <LogIn className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+        </button>
+        <button
+          onClick={onGoPatient}
+          className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 text-lg font-semibold text-teal-600 dark:text-teal-400 bg-white dark:bg-slate-800/50 border-2 border-teal-500/50 dark:border-teal-400/50 rounded-xl shadow-lg hover:border-teal-500 dark:hover:border-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transform hover:-translate-y-1 transition-all duration-300"
+        >
+          Patient View{" "}
+          <ChevronRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+        </button>
+      </div>
+    </div>
+
+    {/* Footer (always bottom) */}
+    <footer className="relative z-10 py-16 text-xs text-slate-500 dark:text-slate-400">
+      © SoulSpeak 2025
+    </footer>
+  </div>
 );
+
 
 const AuthScreen = ({ initialMode = 'login', onLoginSuccess, onAuthError, onGoLogin }) => {
 	const [isLogin, setIsLogin] = useState(initialMode !== 'signup');
