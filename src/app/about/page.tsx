@@ -233,11 +233,14 @@ export default function AboutPage() {
                         <Sparkles className="h-4 w-4 text-teal-500" />
                         About Me
                     </div>
-                    <h1 className="relative max-w-5xl text-balance text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white">
-                        Building meaningful interfaces with care
+                    <h1 className="relative max-w-4xl text-balance text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white">
+                        Giving a Voice to the Voiceless
                     </h1>
-                    <p className="mt-6 max-w-3xl mx-auto text-xl sm:text-2xl text-slate-600 dark:text-slate-300">
-                        I turn complex problems into elegant, human-centered products. Clean architecture, accessible UI, and small touches that spark joy.
+                    <p className="mt-10 max-w-3xl mx-auto text-xl sm:text-2xl text-slate-600 dark:text-slate-300">
+                        I am SoulSpeak. I listen when words can’t be spoken. 
+                        I read the smallest nod, sense concern, and turn it into a voice that can ask, 
+                        answer, and call for help. I’m built to bridge silence and connection — with care, empathy, and the power of AI.
+                        Every pixel, every nod, brings us closer to restoring connection, dignity, and independence
                     </p>
                 </div>
             </header>
