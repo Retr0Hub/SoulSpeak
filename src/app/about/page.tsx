@@ -17,25 +17,25 @@ const features: Feature[] = [
     {
         id: "mission",
         title: "Mission-Driven",
-        description: "I care deeply about building humane, accessible interfaces. This project explores intuitive communication with delightful UX.",
+        description: "I exist to restore connection where words fail. SoulSpeak is built to empower non-verbal individuals with intuitive, accessible communication — blending empathy, AI, and seamless UX to turn simple gestures into meaningful conversations.",
         icon: <HeartHandshake className="h-7 w-7" />,
     },
     {
         id: "craft",
         title: "Craft & Clarity",
-        description: "I love crisp UI, thoughtful details, and performance-minded code. Modern animations, minimal cognitive load.",
+        description: "I transform subtle gestures into clear, natural responses with precision and speed. Every frame of detection, every interaction, is designed for simplicity, reliability, and effortless communication — because clarity can change lives.",
         icon: <Lightbulb className="h-7 w-7" />,
     },
     {
         id: "momentum",
         title: "Momentum",
-        description: "Shipping is a muscle. I iterate fast, validate early, and keep moving. Energy in, momentum out.",
+        description: "I evolve with every interaction, learning and adapting to understand users better. From refining gesture accuracy to expanding communication features, I move fast to turn innovation into independence.",
         icon: <Rocket className="h-7 w-7" />,
     },
     {
         id: "spark",
         title: "A Little Spark",
-        description: "Playfulness matters. Smooth micro-interactions and subtle depth bring interfaces to life.",
+        description: "I’m not just functional — I feel alive. Every nod, every response is enhanced with subtle intelligence and human-like warmth - with a magical sense of connection",
         icon: <Sparkles className="h-7 w-7" />,
     },
 ];
@@ -122,14 +122,7 @@ function RevealCard({ feature, index }: { feature: Feature; index: number }) {
                     <p className="mt-6 text-slate-600 dark:text-slate-300 leading-relaxed text-lg sm:text-xl">
                         {feature.description}
                     </p>
-                    <div className="mt-7 flex flex-wrap gap-2">
-                        <span className="px-3 py-1 text-xs uppercase tracking-wider rounded-full bg-slate-900/5 dark:bg-white/5 text-slate-600 dark:text-slate-300 ring-1 ring-slate-900/10 dark:ring-white/10">
-                            #{index + 1}
-                        </span>
-                        <span className="px-3 py-1 text-xs rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 text-teal-700 dark:text-teal-300 ring-1 ring-teal-500/20">
-                            parallax-pop
-                        </span>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -257,7 +250,7 @@ export default function AboutPage() {
                         <div className="absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-teal-400/20 via-blue-500/10 to-indigo-500/20 blur-2xl -z-10" />
                         <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">Let’s build something great</h2>
                         <p className="mt-4 text-slate-600 dark:text-slate-300">
-                            Drop a message. It saves directly to a CSV on the server.
+                            Drop a message to connect with us.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-3 justify-center">
                             <button onClick={() => setShowContact(true)} className="px-6 py-3 rounded-2xl text-white bg-teal-600 hover:bg-teal-700 transition-all">
