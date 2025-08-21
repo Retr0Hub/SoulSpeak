@@ -1,0 +1,39 @@
+id,category,question,Priority
+1,basic_needs,Do you need water?,Low
+2,basic_needs,Are you feeling hungry?,Low
+3,basic_needs,Do you need to use the bathroom?,Low
+4,basic_needs,Do you want to rest now?,Low
+5,basic_needs,Do you need a blanket?,Low
+6,basic_needs,Do you want the lights turned off?,Low
+7,basic_needs,Do you want the lights turned on?,Low
+8,basic_needs,Do you want to sit up?,Low
+9,basic_needs,Do you need to lie down?,Low
+10,basic_needs,Do you want the window open?,Low
+11,medical_help,Are you feeling pain?,Medium
+12,medical_help,Is your chest hurting?,High
+13,medical_help,Do you feel dizzy?,Medium
+14,medical_help,Do you have trouble breathing?,Low
+15,medical_help,Are you feeling weak?,Low
+16,medical_help,Do you need your medicine?,Low
+17,medical_help,Do you want to see a doctor?,Low
+18,medical_help,Do you feel nauseous?,Low
+19,medical_help,Is your vision blurry?,Low
+20,medical_help,Do you have a headache?,Medium
+21,social_emotional,Do you want to talk to your family?,Low
+22,social_emotional,Do you want to listen to music?,Low
+23,social_emotional,Do you want to watch TV?,Low
+24,social_emotional,Are you feeling anxious?,Low
+25,social_emotional,Do you feel lonely?,Low
+26,social_emotional,Do you want someone to sit with you?,Low
+27,social_emotional,Do you want to go outside?,Low
+30,social_emotional,Do you need a phone call?,Low
+31,miscellaneous,Do you want the fan turned on?,Low
+32,miscellaneous,Do you want the fan turned off?,Low
+33,miscellaneous,Do you want the AC turned on?,Low
+34,miscellaneous,Do you want the AC turned off?,Low
+35,miscellaneous,Do you need the room to be quieter?,Low
+36,miscellaneous,Do you want more light in the room?,Low
+37,miscellaneous,Do you want less light in the room?,Low
+38,miscellaneous,Do you want the door closed?,Low
+39,miscellaneous,Do you want the door open?,Low
+40,miscellaneous,Do you need a pillow adjustment?,Low
